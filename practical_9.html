@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Webpage</title>
+  <style>
+    /* Base styles: Mobile-first */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+
+    nav {
+      background-color: #f4f4f4;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: #333;
+      font-size: 1em;
+    }
+
+    main {
+      padding: 1em;
+    }
+
+    .container {
+      max-width: 90%;
+      margin: auto;
+    }
+
+    /* Media Queries: Tablet */
+    @media (min-width: 600px) {
+      nav {
+        text-align: left;
+      }
+
+      nav a {
+        font-size: 1.2em;
+      }
+
+      .container {
+        max-width: 80%;
+      }
+    }
+
+    /* Media Queries: Desktop */
+    @media (min-width: 900px) {
+      body {
+        font-size: 1.1rem;
+      }
+
+      .container {
+        max-width: 70%;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Responsive Site</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main class="container">
+    <h2>Welcome!</h2>
+    <p>This is a mobile-first responsive webpage using flexible units and media queries.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Responsive Site</p>
+  </footer>
+</body>
+</html>

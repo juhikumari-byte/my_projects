@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Colourful Form Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+    h2 {
+      text-align: center;
+      color: #ff6f61;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      transition: border-color 0.3s;
+    }
+    input:focus {
+      border-color: #6a82fb;
+      outline: none;
+    }
+    .error {
+      border-color: #ff4d4d !important;
+      background-color: #ffe6e6;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <form id="myForm" onsubmit="return validateForm()">
+    <h2> Colourful Form</h2>
+    
+    <label for="username">Username:</label>
+    <input type="text" id="username" oninput="checkInput(this)" placeholder="Enter username">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" oninput="checkInput(this)" placeholder="Enter email">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" oninput="checkInput(this)" placeholder="Enter password">
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+    function validateForm() {
+      let username = document.getElementById("username").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let password = document.getElementById("password").value.trim();
+
+      if (username === "") {
+        alert("⚠ Username cannot be empty!");
+        document.getElementById("username").classList.add("error");
+        return false;
+      }
+      if (email === "" || !email.includes("@")) {
+        alert("⚠ Please enter a valid email!");
+        document.getElementById("email").classList.add("error");
+        return false;
+      }
+      if (password.length < 6) {
+        alert("⚠ Password must be at least 6 characters!");
+        document.getElementById("password").classList.add("error");
+        return false;
+      }
+      alert(" Form submitted successfully!");
+      return true;
+    }
+    function checkInput(input) {
+      if (input.value.trim() !== "") {
+        input.classList.remove("error");
+      }
+    }
+  </script>
+</body>
+</html>

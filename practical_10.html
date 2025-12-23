@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Div and Span Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+    }
+
+    .header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .nav span {
+      margin-left: 15px;
+    }
+
+    .content {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .sidebar {
+      width: 25%;
+      background-color: #f4f4f4;
+      padding: 15px;
+    }
+
+    .main {
+      width: 75%;
+      padding: 15px;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="logo">MySite</span>
+      <span class="nav">
+        <span>Home</span>
+        <span>About</span>
+        <span>Contact</span>
+      </span>
+    </div>
+
+    <div class="content">
+      <div class="sidebar">
+        <span>Sidebar content here</span>
+      </div>
+      <div class="main">
+        <span>Main content goes here</span>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>&copy; 2025 MySite</span>
+    </div>
+  </div>
+</body>
+</html>

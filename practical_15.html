@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Colorful DOM Manipulation</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f0f8ff;
+            padding-top: 30px;
+        }
+        h2 {
+            color: darkviolet;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+        }
+        .btn1 { background: #ff5722; }
+        .btn2 { background: #03a9f4; }
+        .btn3 { background: #4caf50; }
+        .btn4 { background: #9c27b0; }
+        .btn5 { background: #e91e63; }
+        #box {
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 10px gray;
+        }
+    </style>
+</head>
+<body>
+<h2 id="heading"> DOM Manipulation Demo </h2>
+<div id="box">
+    <p id="para">This is a colorful paragraph. Click buttons to change me!</p>
+    <p class="msg">This is a message selected using querySelector().</p>
+</div>
+<button class="btn1" onclick="changeText()">Change Text</button>
+<button class="btn2" onclick="changeColor()">Change Color</button>
+<button class="btn3" onclick="changeBg()">Change Background</button>
+<button class="btn4" onclick="increaseSize()">Increase Font Size</button>
+<button class="btn5" onclick="toggleBox()">Hide/Show Box</button>
+<script>
+function changeText() {
+    document.getElementById("para").innerHTML =
+        "<b style='color:#ff9800;'>Text changed using getElementById() + innerHTML!</b>";
+}
+function changeColor() {
+    let msg = document.querySelector(".msg");
+    msg.style.color = "#4a148c";
+    msg.style.fontWeight = "bold";
+    msg.innerHTML = "Color changed using querySelector() ";
+}
+function changeBg() {
+    document.getElementById("para").style.background = "#b2ebf2";
+    document.getElementById("para").style.padding = "10px";
+    document.getElementById("para").style.borderRadius = "10px";
+}
+function increaseSize() {
+    let p = document.getElementById("para");
+    p.style.fontSize = "22px";
+    p.style.color = "#d32f2f";
+}
+function toggleBox() {
+    let box = document.getElementById("box");
+
+    if (box.style.display === "none") {
+        box.style.display = "block";
+    } else {
+        box.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

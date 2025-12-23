@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Form Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    form {
+      max-width: 500px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"], select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+  <form action="#" method="post">
+    
+    <!-- Text Input -->
+    <div class="form-group">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="fullname" required>
+    </div>
+
+    <!-- Radio Buttons -->
+    <div class="form-group">
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="Male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="Female">
+      <label for="female">Female</label>
+    </div>
+
+    <!-- Checkboxes -->
+    <div class="form-group">
+      <label>Interests:</label>
+      <input type="checkbox" id="sports" name="interests" value="Sports">
+      <label for="sports">Sports</label>
+      <input type="checkbox" id="music" name="interests" value="Music">
+      <label for="music">Music</label>
+      <input type="checkbox" id="reading" name="interests" value="Reading">
+      <label for="reading">Reading</label>
+    </div>
+
+    <!-- Select Menu -->
+    <div class="form-group">
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="">--Select--</option>
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="Australia">Australia</option>
+      </select>
+    </div>
+
+    <!-- Submit and Reset Buttons -->
+    <div class="form-group">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daily Exercise schedule</title>
+  <style>
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+    }
+    caption {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    th, td {
+      border: 2px solid #555;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    td {
+      background-color: #f2f2f2;
+    }
+    .highlight {
+      background-color: #ffcccb;
+    }
+    .merged {
+      background-color: #add8e6;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <caption>Daily Exercise schedule</caption>
+    <tr>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Activity</th>
+    </tr>
+    <tr>
+      <td rowspan="2" class="merged">Monday</td>
+      <td>Morning</td>
+      <td class="highlight">Yoga</td>
+    </tr>
+    <tr>
+      <td>Evening</td>
+      <td>Reading</td>
+    </tr>
+    <tr>
+      <td rowspan="2" class="merged">Tuesday</td>
+      <td>Morning</td>
+      <td class="highlight">Jogging</td>
+    </tr>
+    <tr>
+      <td>Evening</td>
+      <td>Dinner with friends</td>
+    </tr>
+  </table>
+
+</body>
+</html>

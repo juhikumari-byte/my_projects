@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced CSS Box Model</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .container {
+      width: 80%;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 5px solid #4CAF50;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      padding: 15px;
+      border: 2px dashed #2196F3;
+      margin: 20px 0;
+      background-color: #f0f8ff;
+    }
+
+    .highlight-box {
+      padding: 20px;
+      margin: 30px 0;
+      border: 3px double #ff5722;
+      background-color: #fff3e0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome to My Styled Page</h1>
+    <p>This paragraph demonstrates the use of padding, margin, border, and background color.</p>
+    <div class="highlight-box">
+      This is a highlighted box using the CSS box model with custom borders and spacing.
+    </div>
+  </div>
+
+</body>
+</html>
